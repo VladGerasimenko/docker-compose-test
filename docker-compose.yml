@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  first_service:
+    build:
+      first_container/
+    restart: always
+    ports:
+    - 8080:8080
+    environment:
+      - TZ=Europe/Moscow
+
+  second_service:
+    build:
+      second_container/
+    restart: always
+    ports:
+      - 5050:5050
+    environment:
+      - TZ=Europe/Moscow
+
+  third_service:
+    build:
+      third_container/
+    restart: always
+    ports:
+      - 3030:3030
+    environment:
+      - TZ=Europe/Moscow
